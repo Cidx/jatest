@@ -36,7 +36,7 @@ app.post('/webhook', function (req, res) {
     for (i = 0; i < events.length; i++) {
         var event = events[i];
         if (event.message && event.message.text) {
-			if(event.message.text.match(/hello/i) {
+			if(event.message.text.match(/hello/i) || event.message.text.match(/hi/i)) {
 				sendMessage(event.sender.id, {text: "Hello, can you please tell me your name?"});
 			}
 			else if(event.message.text.match(/andriy/i)) {
