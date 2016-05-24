@@ -7,6 +7,7 @@ var port = process.env.PORT || 8080;
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
+  console.log('Log test 1');
 });
 
 // Node.js Example
