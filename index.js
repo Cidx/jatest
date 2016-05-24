@@ -31,10 +31,11 @@ app.post('/webhook', function (req, res) {
             sendMessage(event.sender.id, {text: "Echo: " + event.message.text});
         }
     }*/
-	console.log('Post Event');
-	console.log(request.body);
-	console.log(req.body.entry[0].messaging);
-	console.log(req.body.entry[0].messaging[0]);
+	console.log('Post Event..');
+	console.log('Post Event..');
+	console.log(req.body);
+	//console.log(req.body.entry[0].messaging);
+	//console.log(req.body.entry[0].messaging[0]);
     res.sendStatus(200);
 });
 
