@@ -1,9 +1,17 @@
 var express = require('express');
+var bodyParser = require('body-parser');
+var request = require('request');
+
 var app = express();
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
 var port = process.env.PORT || 8080;
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+app.listen((process.env.PORT || 8080));
+
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
@@ -24,27 +32,17 @@ app.get('/webhook', function (req, res) {
 
 // handler receiving messages
 app.post('/webhook', function (req, res) {
-    /*var events = req.body.entry[0].messaging;
+    var events = req.body.entry[0].messaging;
     for (i = 0; i < events.length; i++) {
         var event = events[i];
         if (event.message && event.message.text) {
             sendMessage(event.sender.id, {text: "Echo: " + event.message.text});
         }
-    }*/
-	console.log('Post Event..');
-	console.log('Post Event..');
-	console.log(req.body);
-	//console.log(req.body.entry[0].messaging);
-	//console.log(req.body.entry[0].messaging[0]);
+    }
+	console.log('Post Event');
     res.sendStatus(200);
 });
 
-
-app.get('/send', function (req, res) {
-  res.send('Send Event');
-  console.log('Send Event');
-  sendMessage('821564021278504', {text: "Echo..."});
-});
 // generic function sending messages
 function sendMessage(recipientId, message) {
     request({
