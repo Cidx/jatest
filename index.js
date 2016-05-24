@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 
 // Node.js Example
 app.get('/webhook', function (req, res) {
-  if (req.query['hub.verify_token'] === 'EAAWOXoAWUzcBAHdpf1QIeH4VIiZAMFPdhbEX4norAlQDdRHcOLS9mV5KSnrejONw5JFeUJABJjzqHCirjRsoj998kD5GaT5hdxTifaEkQfz2iHgnLYdCuT4Bay7ZBK4eN6xtZCBWtZASYNdc8d4NOYvqIIjubKYjKzZAZAxE1ZAvAZDZD') {
+  if (req.query['hub.verify_token'] === 'ja_test_verify_token') {
     res.send(req.query['hub.challenge']);
   } else {
     res.send('Error, wrong validation token');    
