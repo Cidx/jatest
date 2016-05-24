@@ -1,0 +1,5 @@
+# Please, don't delete this file.  The config generation process depends on
+# some of these entries to function correctly.  If you need to modify it,
+# please consult with someone familiar with that process.
+
+node_modules

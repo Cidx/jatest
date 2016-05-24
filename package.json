@@ -1,0 +1,23 @@
+{
+  "name": "jatest",
+  "version": "1.0.0",
+  "description": "blablabla",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cidx/jatest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cidx/jatest/issues"
+  },
+  "homepage": "https://github.com/Cidx/jatest#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
