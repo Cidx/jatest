@@ -17,6 +17,8 @@ app.get('/webhook', function (req, res) {
   } else {
     res.send('Error, wrong validation token');    
   }
+  console.log(request.body);
+  
 });
 
 app.listen(port, function() {
