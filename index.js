@@ -39,7 +39,7 @@ app.post('/webhook', function (req, res) {
 });
 
 
-app.post('/send', function (req, res) {
+app.get('/send', function (req, res) {
   res.send('Send Event');
   console.log('Send Event');
   sendMessage('821564021278504', {text: "Echo..."});
