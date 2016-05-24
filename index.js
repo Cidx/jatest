@@ -36,11 +36,11 @@ app.post('/webhook', function (req, res) {
     for (i = 0; i < events.length; i++) {
         var event = events[i];
         if (event.message && event.message.text) {
-			if(event.message.text === 'Hello' || event.message.text === 'hello') {
-				sendMessage(event.sender.id, {text: "Hello, how can I help you?"});
+			if(event.message.text.match(/hello/i) {
+				sendMessage(event.sender.id, {text: "Hello, can you please tell me your name?"});
 			}
 			else if(event.message.text.match(/andriy/i)) {
-				sendMessage(event.sender.id, {text: "Hello Andriy, how can I help you?"});
+				sendMessage(event.sender.id, {text: "Nice to meet you Andriy, how can I help you?"});
 			}
 			else {
 				sendMessage(event.sender.id, {text: "Echo: " + event.message.text});
