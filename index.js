@@ -7,7 +7,7 @@ var port = process.env.PORT || 8080;
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
-  console.log('Log test 1');
+  console.log('Log test 2');
 });
 
 // Node.js Example
@@ -17,6 +17,7 @@ app.get('/webhook', function (req, res) {
   } else {
     res.send('Error, wrong validation token');    
   }
+  console.log('Log test 3');
   console.log(request.body);
   
 });
