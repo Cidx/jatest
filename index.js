@@ -39,6 +39,9 @@ app.post('/webhook', function (req, res) {
 			if(event.message.text === 'Hello' || event.message.text === 'hello') {
 				sendMessage(event.sender.id, {text: "Hello, how can I help you?"});
 			}
+			else if(event.message.text.match(/andriy/i)) {
+				sendMessage(event.sender.id, {text: "Hello Andriy, how can I help you?"});
+			}
 			else {
 				sendMessage(event.sender.id, {text: "Echo: " + event.message.text});
 			}
